@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "achievement_fk": 1,
+      "user_fk": 1,
+      "time": "2020-04-23T13:25:43.511Z"
+    },
+    {
+      "achievement_fk": 5,
+      "user_fk": 1,
+      "time": "2020-04-24T13:25:43.511Z"
+    },
+    {
+      "achievement_fk": 3,
+      "user_fk": 1,
+      "time": "2020-04-25T13:25:43.511Z"
+    },
+    {
+      "achievement_fk": 2,
+      "user_fk": 1,
+      "time": "2020-04-26T13:25:43.511Z"
+    },
+    {
+      "achievement_fk": 4,
+      "user_fk": 1,
+      "time": "2020-04-27T13:25:43.511Z"
+    },
+    {
+      "achievement_fk": 1,
+      "user_fk": 1,
+      "time": "2020-04-28T13:25:43.511Z"
+    },
+    {
+      "achievement_fk": 2,
+      "user_fk": 1,
+      "time": "2020-04-29T13:25:43.511Z"
+    }
+  ]
+}

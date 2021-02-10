@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "user_fk": 1,
+      "post_fk": 1,
+      "upvote": 1,
+      "downvote": 0,
+      "ip": "0.0.0.0"
+    },
+    {
+      "user_fk": 1,
+      "post_fk": 2,
+      "upvote": 0,
+      "downvote": 1,
+      "ip": "0.0.0.0"
+    },
+    {
+      "user_fk": 2,
+      "post_fk": 1,
+      "upvote": 0,
+      "downvote": 0,
+      "ip": "0.0.0.0"
+    },
+    {
+      "user_fk": 3,
+      "post_fk": 1,
+      "upvote": 1,
+      "downvote": 0,
+      "ip": "0.0.0.0"
+    }
+  ]
+}

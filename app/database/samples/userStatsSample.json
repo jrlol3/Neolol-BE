@@ -1,0 +1,9 @@
+{
+  "data": [
+    { "user_fk": 1 },
+    { "user_fk": 2 },
+    { "user_fk": 3 },
+    { "user_fk": 4 },
+    { "user_fk": 5 }
+  ]
+}

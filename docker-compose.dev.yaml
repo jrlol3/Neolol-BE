@@ -1,0 +1,23 @@
+version: '3'
+services:
+  dev:
+    build: .
+    image: neolol-be-dev:latest
+    working_dir: /usr/src/app
+    network_mode: 'host'
+    volumes:
+      - /var/www/cdn.neolol.com:/var/www/cdn.neolol.com
+    environment:
+      - PORT=5001
+      - DB_DATABASE=database
+      - DB_PORT=3306
+      - DB_USER=user
+      - DB_PASSWORD=password
+      - DB_LOGGING=false
+      - COOKIE_DOMAIN=example.com
+      - COOKIE_SECURE=true
+      - GOOGLE_CAPTCHA_V2_PRIVATE_KEY=private_key
+      - GOOGLE_CAPTCHA_V3_PRIVATE_KEY=private_key
+    command: bash -c "pm2-runtime start server.js"
+    ports:
+      - 5002:5002

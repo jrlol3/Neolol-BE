@@ -1,0 +1,102 @@
+{
+  "data": [
+    {
+      "user_fk": 1,
+      "post_fk": 10,
+      "content": "Upvote if you're seeing this in 2020"
+    },
+    {
+      "user_fk": 2,
+      "post_fk": 11,
+      "content": "Just an English comment passing through"
+    },
+    {
+      "user_fk": 3,
+      "post_fk": 11,
+      "content": "YEET"
+    },
+    {
+      "user_fk": 3,
+      "post_fk": 1,
+      "content": "YEET"
+    },
+    {
+      "user_fk": 3,
+      "post_fk": 2,
+      "content": "YEET"
+    },
+    {
+      "user_fk": 3,
+      "post_fk": 3,
+      "content": "YEET"
+    },
+    {
+      "user_fk": 1,
+      "post_fk": 13,
+      "content": "N",
+      "score": 68,
+      "has_reply": "true",
+      "time_posted": "2017-04-23T13:25:43.511Z"
+    },
+    {
+      "user_fk": 2,
+      "post_fk": 13,
+      "parent_fk": 7,
+      "thread_fk": 7,
+      "content": "I",
+      "score": 49,
+      "has_reply": "true",
+      "reply_depth": 1,
+      "time_posted": "2018-04-23T13:25:43.511Z"
+    },
+    {
+      "user_fk": 3,
+      "post_fk": 13,
+      "parent_fk": 8,
+      "thread_fk": 7,
+      "content": "G",
+      "score": 32,
+      "reply_depth": 2,
+      "has_reply": "true",
+      "time_posted": "2017-04-23T13:25:43.511Z"
+    },
+    {
+      "user_fk": 1,
+      "post_fk": 13,
+      "parent_fk": 9,
+      "thread_fk": 7,
+      "content": "G",
+      "score": 45,
+      "reply_depth": 3,
+      "has_reply": "true",
+      "time_posted": "2018-04-23T13:25:43.511Z"
+    },
+    {
+      "user_fk": 2,
+      "post_fk": 13,
+      "parent_fk": 10,
+      "thread_fk": 7,
+      "content": "A",
+      "score": -10,
+      "reply_depth": 4,
+      "time_posted": "2019-04-23T13:25:43.511Z"
+    },
+    {
+      "user_fk": 2,
+      "post_fk": 13,
+      "parent_fk": 10,
+      "thread_fk": 7,
+      "content": "E",
+      "score": 11,
+      "reply_depth": 4,
+      "time_posted": "2019-04-23T13:25:43.512Z"
+    },
+    {
+      "user_fk": 3,
+      "post_fk": 13,
+      "score": 13,
+      "content": "Despite this post being #13, it has 50% of the comments",
+      "time_posted": "2020-04-23T13:25:43.511Z"
+    }
+  ]
+}

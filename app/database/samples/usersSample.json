@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "username": "user",
+      "nickname": "nick",
+      "about": "",
+      "password": "",
+      "email": "",
+      "token": "",
+      "salt": ""
+    }
+  ]
+}
