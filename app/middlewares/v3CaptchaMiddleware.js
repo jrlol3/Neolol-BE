@@ -47,6 +47,10 @@ exports.check = async function (req, res, next) {
     return res.status(code.captchaFailed).send(msg.captchaFailed);
   }
   const secretKey = process.env.GOOGLE_CAPTCHA_V3_PRIVATE_KEY;
+  // Bypass if there is no Captcha key on the .env
+  if (!secretKey || secretKey == "key") {
+    return next();
+  }
   const token = body.recaptcha_token;
   const url = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`;
   const resp = await fetch(url, {
