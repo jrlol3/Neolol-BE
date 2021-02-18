@@ -11,7 +11,6 @@ const { debugKey } = require("../config/config");
 const check = require("../helpers/checksHelper");
 const { msg, code } = require("../constants");
 
-const googleRecaptcha = new GoogleRecaptcha({ secret: process.env.GOOGLE_CAPTCHA_V2_PRIVATE_KEY });
 const model = db.user;
 
 exports.create = async function(req, res) {
@@ -35,12 +34,18 @@ exports.create = async function(req, res) {
   // Makes sure the e-mail is always lower case
   user.email = user.email.toLowerCase();
 
-  // This can also take the user's IP as remoteIp
+  // Request has bypass
   if (!bypass && bypass !== debugKey) {
-    await googleRecaptcha.verify({ response: user["g-recaptcha-response"] }, (error) => {
-      if (error)
-        return res.status(code.captchaFailed).send(msg.captchaFailed);
-    });
+    const secretKey = process.env.GOOGLE_CAPTCHA_V2_PRIVATE_KEY;
+    // .env is not configured
+    if (secretKey && secretKey != "key") {
+      const googleRecaptcha = new GoogleRecaptcha({ secret: secretKey });
+      // This can also take the user's IP as remoteIp
+      await googleRecaptcha.verify({ response: user["g-recaptcha-response"] }, (error) => {
+        if (error)
+          return res.status(code.captchaFailed).send(msg.captchaFailed);
+      });
+    }
   }
 
   const created = await service.newUser(user);
