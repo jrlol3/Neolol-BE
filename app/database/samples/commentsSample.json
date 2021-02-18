@@ -33,7 +33,7 @@
     {
       "user_fk": 1,
       "post_fk": 13,
-      "content": "N",
+      "content": "Y",
       "score": 68,
       "has_reply": "true",
       "time_posted": "2017-04-23T13:25:43.511Z"
@@ -43,7 +43,7 @@
       "post_fk": 13,
       "parent_fk": 7,
       "thread_fk": 7,
-      "content": "I",
+      "content": "E",
       "score": 49,
       "has_reply": "true",
       "reply_depth": 1,
@@ -54,7 +54,7 @@
       "post_fk": 13,
       "parent_fk": 8,
       "thread_fk": 7,
-      "content": "G",
+      "content": "E",
       "score": 32,
       "reply_depth": 2,
       "has_reply": "true",
@@ -65,7 +65,7 @@
       "post_fk": 13,
       "parent_fk": 9,
       "thread_fk": 7,
-      "content": "G",
+      "content": "E",
       "score": 45,
       "reply_depth": 3,
       "has_reply": "true",
@@ -76,7 +76,7 @@
       "post_fk": 13,
       "parent_fk": 10,
       "thread_fk": 7,
-      "content": "A",
+      "content": "S",
       "score": -10,
       "reply_depth": 4,
       "time_posted": "2019-04-23T13:25:43.511Z"
@@ -86,7 +86,7 @@
       "post_fk": 13,
       "parent_fk": 10,
       "thread_fk": 7,
-      "content": "E",
+      "content": "T",
       "score": 11,
       "reply_depth": 4,
       "time_posted": "2019-04-23T13:25:43.512Z"
@@ -95,7 +95,7 @@
       "user_fk": 3,
       "post_fk": 13,
       "score": 13,
-      "content": "Despite this post being #13, it has 50% of the comments",
+      "content": "This post has a lot of comments",
       "time_posted": "2020-04-23T13:25:43.511Z"
     }
   ]
