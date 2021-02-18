@@ -1,13 +1,53 @@
 {
   "data": [
     {
-      "username": "user",
-      "nickname": "nick",
-      "about": "",
-      "password": "",
-      "email": "",
-      "token": "",
-      "salt": ""
+      "username": "alpha",
+      "nickname": "Alpha",
+      "about": "Be careful, everything you put in sample jsons bypasses SQL checks. password: '123456789'",
+      "password": "$2b$10$ZkqjfyihMd4BSCOWTePT6eSRF2PTaK0iWunRkq37sKc2PuXHzLVtK",
+      "email": "alpha@neolol.com",
+      "token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpybG9sIiwiZW1haWwiOiJqcmxvbEBnbWFpbC5jb20iLCJuaWNrbmFtZSI6ImpybG9sMyIsImV0YyI6Ind0Zj8iLCJpYXQiOjE1ODcyNzgyMTAsImF1ZCI6Imh0dHBzOi8vbmVvbG9sLmNvbSIsImlzcyI6Ikh1Z2VDbG9uZSIsInN1YiI6ImpybG9sIn0.2OQopaDZVb_jKHf3vTwKeDlf9DnI_TGlZR03e1UcPpYuqKvJti_IWvWc3que4zCzsmiUSFAWmT0FgbsJoiN_eA",
+      "salt": "$2b$10$ZkqjfyihMd4BSCOWTePT6e"
+    },
+    {
+      "username": "beta",
+      "nickname": "Beta",
+      "about": "password: 'password'",
+      "password": "$2b$10$9ySWulTmpYFucol6VsO6xOMvJA0sS0oCJjeBR6DN1ZItoQTD8c7g2",
+      "email": "beta@neolol.com",
+      "is_admin": true,
+      "token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJleGFuaSIsImVtYWlsIjoicmV4YW5pQGdtYWlsLmNvbSIsIm5pY2tuYW1lIjoiUmV4YW5pIiwiZXRjIjoid3RmPyIsImlhdCI6MTU4NzI3ODIzNiwiYXVkIjoiaHR0cHM6Ly9uZW9sb2wuY29tIiwiaXNzIjoiSHVnZUNsb25lIiwic3ViIjoicmV4YW5pIn0.s3s0rIcREm-yuakJaTfwtwdgLKcYw9P8LG5Rvkq8g_chgftqyjlxOh_xWnFNiucEIgMo3syu-rNEWu-ipohfcg",
+      "salt": "$2b$10$9ySWulTmpYFucol6VsO6xO"
+    },
+    {
+      "username": "delta",
+      "nickname": "Delta",
+      "about": "password: 'testtest'",
+      "password": "$2b$10$bIv1jaa1bk62SnVDUhZGK.fgxRfaeW.74ciUwsLOqbCxm.m5SbwXi",
+      "email": "delta@neolol.com",
+      "is_mod": true,
+      "token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdpZ2FnaWdvdCIsImVtYWlsIjoiZ2lnb3RAZ21haWwuY29tIiwibmlja25hbWUiOiJHaWdhR2lnb3QiLCJldGMiOiJ3dGY_IiwiaWF0IjoxNTg3Mjc4MjUxLCJhdWQiOiJodHRwczovL25lb2xvbC5jb20iLCJpc3MiOiJIdWdlQ2xvbmUiLCJzdWIiOiJnaWdhZ2lnb3QifQ.2l3FASYlcLG-WOFdPv-E7fOJQzxfJHC-hMWQYqS45tolhT8QZ28BpOZ_-3DuEqApYIYQiFaad_7gn3h7fu3t4g",
+      "salt": "$2b$10$bIv1jaa1bk62SnVDUhZGK."
+    },
+    {
+      "username": "gamma",
+      "nickname": "Gamma",
+      "about": "password: '137137'",
+      "password": "$2b$10$6yiHSQ9MYrl1SYGlbn6Rq.ZewUbX55PbFMBQZfA/Glvw5KnyHK7.K",
+      "email": "gamma@neolol.com",
+      "is_mod": false,
+      "token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlBvc2hNQiIsImVtYWlsIjoibWF4ZXJAZ21haWwuY29tIiwibmlja25hbWUiOiJQb3NoTUIiLCJldGMiOiJ3dGY_IiwiaWF0IjoxNTg5ODUxODY1LCJhdWQiOiJodHRwczovL25lb2xvbC5jb20iLCJpc3MiOiJIdWdlQ2xvbmUiLCJzdWIiOiJQb3NoTUIifQ.Aar0Z3RPx0o5qX-lPz_SyoaKvYlCMmAcaqmAtggQ_j_G4TZYEM6iFjBe9VxysZTR4eiDzF_F14s_HSCRow00wQ",
+      "salt": "$2b$10$6yiHSQ9MYrl1SYGlbn6Rq."
+    },
+    {
+      "username": "zeta",
+      "nickname": "Zetta",
+      "about": "password: '123123123'",
+      "password": "$2b$10$zh9cfXKL20bHrn/xQH462./ehchxoIJOwse0qzXpZtU0UgnxLGSD.",
+      "email": "zetta@neolol.com",
+      "is_mod": false,
+      "token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImplZmZkZXYiLCJlbWFpbCI6ImplZmZAZ21haWwuY29tIiwibmlja25hbWUiOiJKZWZmVGhlRGV2Q2hlZiIsImV0YyI6Ind0Zj8iLCJpYXQiOjE1ODk4NDk1MjYsImF1ZCI6Imh0dHBzOi8vbmVvbG9sLmNvbSIsImlzcyI6Ikh1Z2VDbG9uZSIsInN1YiI6ImplZmZkZXYifQ.yQMc52jqvyizvrERy2EKbMrSDyG12JcZZyQZc7HXEOtjYEl2Iw9W1tZp8r3oS40sIyaa8HsgA76qmfA0ybJlRA",
+      "salt": "$2b$10$zh9cfXKL20bHrn/xQH462."
     }
   ]
 }
