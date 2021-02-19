@@ -104,7 +104,18 @@ exports.save = async function() {
   swagger.paths = addV3CaptchaToPaths(swagger);
   swagger.components.schemas = { ...swagger.components.schemas, ...schemas };
 
-  fs.writeFile("app/swagger/docs/api.yml", YAML.stringify(swagger), function(err) {
+  const yaml = YAML.stringify(swagger);
+  fs.writeFile("app/swagger/docs/api.yml", yaml, function(err) {
     if (err) return console.log(err);
   });
+  fs.writeFile("docs/api.yml", yaml, function(err) {
+    if (err) return console.log(err);
+  });
+  saveStaticHtmlDoc(swagger);
 };
+
+function saveStaticHtmlDoc(swagger) {
+  const template = fs.readFileSync(`app/swagger/ui-template.html`);
+  const page = template.toString().replace("{{{spec}}}", JSON.stringify(swagger));
+  fs.writeFileSync("docs/swagger.html", page);
+}
