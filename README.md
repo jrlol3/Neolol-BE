@@ -1,60 +1,55 @@
 # NEOLOL Back-end
 
-#### [Front-End Repository](https://github.com/Neolol-source/Neolol-FE)  
+#### [Front-End Repository](https://github.com/Neolol-source/Neolol-FE)
 
-#### [Feature list on Trello](https://trello.com/b/b5gN1DpV/neolol-planned-features)  
+#### [Feature list on Trello](https://trello.com/b/b5gN1DpV/neolol-planned-features)
 
 
 ## Installation
 
-Install [MySQL](https://dev.mysql.com/downloads/mysql/)  
+Install [MySQL](https://dev.mysql.com/downloads/mysql/)
 ```bash
 $ sudo apt update
 $ sudo apt install mysql-server
 $ sudo systemctl restart mysql
-```  
+```
 
-Configure MySQL credentials and create a Database 
+Configure MySQL credentials and create a Database
 ```bash
 $ mysql -u root -p
-```  
+```
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '[PASSWORD]';
 FLUSH PRIVILEGES;
 CREATE DATABASE test;
 ```
 
-## Usage  
+## Usage
 
 ### Running this Back-End
-On the repository folder, install all dependencies.  
+On the repository folder, install all dependencies.
 ```bash
-$ npm install
-```   
+$ npm ci
+```
 
-Make a copy of the file `.env-TEMPLATE` and name it `.env`;  
-Fill the necessary information following the comments.  
+Make a copy of the file `.env-TEMPLATE` and name it `.env`, then fill the information following the comments.
 
-Run the server.  
+Run the server, at port 5000 by default:
 ```bash
-$ node server.js
-```  
+$ npm run start
+```
 
-This will start the API on localhost with the port 5000 by default.  
-Try accessing http://localhost:5000/  
-
-It will likely return an empty list, so you can add some sample data with:  
+Accessing http://localhost:5000/ will return an empty list, but you can add some sample data with:
 ```bash
-$ node server.js --sample
-```  
+$ npm run sample
+```
 
-You can also reset the database to its blank state at every run with:  
+You can also reset the database to its blank state with:
 ```bash
-$ node server.js --sample --drop
-```  
+$ npm run clean
+```
 
-### Running the Front-End
-https://github.com/Neolol-source/Neolol-FE  
+### Running the [Front-End](https://github.com/Neolol-source/Neolol-FE)
 TBD
 
 ### Running the Tests
@@ -63,23 +58,23 @@ TBD
 ### Docker
 TBD
 
-## Documentation  
-### Swagger  
-You can paste [Swagger YAML](docs/api.yml) at https://editor.swagger.io/   
-Or open the [Swagger UI HTML at /docs/swagger.html](docs/swagger.html) locally.  
-Both are built at every run!  
+## Documentation
+### Swagger
+You can paste [Swagger YAML](docs/api.yml) at https://editor.swagger.io/
+Or open the [Swagger UI HTML at /docs/swagger.html](docs/swagger.html) locally.
+Both are built at every run!
 
-### Postman Endpoint Collection  
-TBD  
+### Postman Endpoint Collection
+TBD
 
 ### Project Structure
-TBD  
+TBD
 
 ## Contributing
 TBD
 
 ## Built with
-- [Next.js](https://nextjs.org/)  
-- [MySQL](https://www.mysql.com/)  
+- [Next.js](https://nextjs.org/)
+- [MySQL](https://www.mysql.com/)
 - [Sequelize ORM](https://sequelize.org/)
 - [Mocha](https://mochajs.org/) and [Chai](https://www.chaijs.com/)

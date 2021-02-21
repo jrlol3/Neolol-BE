@@ -8,7 +8,9 @@
     "dev": "PORT=5002 nodemon server.js --ignore 'api.json' --ignore 'api.yml'",
     "staging": "PORT=5001 nodemon server.js --ignore 'api.json' --ignore 'api.yml'",
     "prod": "PORT=5000 nodemon server.js --ignore 'api.json' --ignore 'api.yml'",
-    "start": "node server.js"
+    "start": "node server.js",
+    "sample": "node server.js --drop --sample",
+    "clean": "node server.js --drop"
   },
   "author": "",
   "license": "ISC",
