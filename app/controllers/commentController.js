@@ -86,7 +86,7 @@ exports.getOnProfile = async function (req, res, next) {
       return res.status(code.notFound).send(msg.notFound);
 
     const comments = await getUserComments(userId, targetUser.user_id, +offset || 0);
-    return res.status(200).send(comments);
+    return res.status(code.success).send(comments);
   } catch (e) {
     console.log(e);
     next(e);
@@ -104,7 +104,10 @@ exports.deleteComment = async (req, res, next) => {
       throw new CommentValidationError(errors.mapped());
     }
     const deletedComment = await softDeleteComment(+postId, +commentId);
-    return res.status(200).send(deletedComment);
+    if (!deletedComment)
+      return res.status(code.notFound).send(msg.notFound);
+
+    return res.status(code.success).send(deletedComment);
   } catch (e) {
     console.log(e);
     next(e);
@@ -113,13 +116,13 @@ exports.deleteComment = async (req, res, next) => {
 
 
 exports.editCommentContent = async (req, res, next) => {
+  if (!req.verified)
+    return res.status(code.notAuthenticated).send(msg.notAuthenticated);
+
   // We'd like to keep these unused variables in case we might need them
   // in the future, most likely in a service, where we'd call some other API's
   // for logging, performance tracking and so on
-
-  // eslint-disable-next-line
-  const userId = req.verified && req.verified.user_id;
-  // eslint-disable-next-line
+  const userId = req.verified.user_id;
   const { postId, commentId } = req.params;
   const { content } = req.body;
 
@@ -129,7 +132,10 @@ exports.editCommentContent = async (req, res, next) => {
       throw new CommentValidationError(errors.mapped());
     }
     const newComment = await editCommentContent(commentId, content);
-    return res.status(200).send(newComment);
+    if (!newComment)
+      return res.status(code.notFound).send(msg.notFound);
+
+    return res.status(code.success).send(newComment);
   } catch (e) {
     console.log(e);
     next(e);

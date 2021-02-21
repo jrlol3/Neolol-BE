@@ -24,6 +24,12 @@
     },
     {
       "user_fk": 3,
+      "title": "Original",
+      "extension": "jpg",
+      "original_content": true
+    },
+    {
+      "user_fk": 3,
       "title": "test rising",
       "extension": "gif",
       "time_rising": "2018-04-23T13:25:43.511Z"

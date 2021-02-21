@@ -15,8 +15,8 @@ services:
       - DB_PASSWORD=password
       - COOKIE_DOMAIN=example.com
       - COOKIE_SECURE=true
-      - GOOGLE_CAPTCHA_V2_PRIVATE_KEY=private_key
-      - GOOGLE_CAPTCHA_V3_PRIVATE_KEY=private_key
+      - GOOGLE_CAPTCHA_V2_PRIVATE_KEY=key
+      - GOOGLE_CAPTCHA_V3_PRIVATE_KEY=key
     command: bash -c "pm2-runtime start server.js"
     ports:
       - 5000:5000

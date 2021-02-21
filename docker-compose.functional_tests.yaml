@@ -16,8 +16,8 @@ services:
       - DB_LOGGING=false
       - COOKIE_DOMAIN=example.com
       - COOKIE_SECURE=true
-      - GOOGLE_CAPTCHA_V2_PRIVATE_KEY=private_key
-      - GOOGLE_CAPTCHA_V3_PRIVATE_KEY=private_key
+      - GOOGLE_CAPTCHA_V2_PRIVATE_KEY=key
+      - GOOGLE_CAPTCHA_V3_PRIVATE_KEY=key
     command: bash -c "npx mocha app/test/test_comments.js"
     ports:
       - 5002:5002

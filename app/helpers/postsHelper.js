@@ -79,6 +79,7 @@ function hideScoreIfNew(post, userId) {
 // Can be used later to unify post treatment
 function treatPost(post, user) {
   if (!post) return post;
+  if (post.deleted != null) delete post.dataValues.deleted;
   const userId = user && user.user_id;
   return hideScoreIfNew(post, userId);
 };

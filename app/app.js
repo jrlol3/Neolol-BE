@@ -63,3 +63,6 @@ exports.initApp = () => {
     return app.listen(port);
   });
 };
+
+// Helps with tests
+exports.constants = require("./constants") ;

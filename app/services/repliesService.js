@@ -68,7 +68,7 @@ function buildTree(flatComments, singleRootId = null) {
 }
 
 exports.getCommentsFromPost = async function(postId, userId, maxDepth = DEFAULT_COMMENT_DEPTH) {
-  const postModelInstance = await postModel.findByPk(postId);
+  const postModelInstance = await postModel.findByPk(+postId);
   if (!postModelInstance)
     throw new CommentValidationError("there is no post with this Id!", code.notFound);
   const postComments = await commentModel.getCommentsFromAPost(postId, userId, maxDepth);

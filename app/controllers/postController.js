@@ -8,17 +8,21 @@ const { provenances, code, DEFAULT_COMMENT_DEPTH, msg } = require("../constants"
 const { PostValidationError } = require("../helpers/validationError");
 const validator = require("../helpers/postValidator");
 const check = require("../helpers/checksHelper");
+const helper = require("../helpers/postsHelper");
 
 
 exports.uploadPost = async function (req, res, next) {
   try {
+    if (!req.verified)
+      return res.status(code.notAuthenticated).send(msg.notAuthenticated);
     if (req.body.options) {
       req.body.options = JSON.parse(req.body.options);
     }
     validator.validatePostUpload(req.body.title, req.files);
     const user = await userService.getUserSimple(req.verified.username);
-    const post = await postService.createPostInDB(user, req.files, req.body.title, req.body.options);
+    let post = await postService.createPostInDB(user, req.files, req.body.title, req.body.options);
     await postService.savePostToDisk(req.files.files, post);
+    post = helper.treatPost(post, user);
     res.status(code.success).json({
       msg: msg.success,
       post,

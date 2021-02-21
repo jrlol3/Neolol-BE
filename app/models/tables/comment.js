@@ -220,8 +220,9 @@ module.exports = function(sequelize, DataTypes) {
 
   CommentModel.softDeleteComment = async (postId, commentId) => {
     const commentToDelete = await CommentModel.findByPk(commentId);
-    // Change this later?
-    if (commentToDelete.getDataValue("post_fk") !== postId)
+    if (!commentToDelete)
+      return null;
+    if (commentToDelete.post_fk !== postId)
       throw new ValidationError("wrong post id");
     commentToDelete.deleted = 1;
     await commentToDelete.save({ fields: ["deleted"] });
@@ -235,7 +236,9 @@ module.exports = function(sequelize, DataTypes) {
 
   CommentModel.editCommentContent = async (commentId, content) => {
     const commentToEdit = await CommentModel.findByPk(commentId);
-    if (commentToEdit.getDataValue("deleted") === true) {
+    if (!commentToEdit)
+      return null;
+    if (commentToEdit.deleted === true) {
       throw new ValidationError("cannot edit a deleted comment");
     }
     commentToEdit.content = content;
