@@ -5,7 +5,7 @@
 #### [Feature list on Trello](https://trello.com/b/b5gN1DpV/neolol-planned-features)
 
 
-## Installation
+## Getting Started
 
 Install [MySQL](https://dev.mysql.com/downloads/mysql/)
 ```bash
@@ -23,8 +23,6 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '[PASSWOR
 FLUSH PRIVILEGES;
 CREATE DATABASE test;
 ```
-
-## Usage
 
 ### Running this Back-End
 On the repository folder, install all dependencies.
@@ -86,8 +84,12 @@ It is incomplete, as it takes effort to keep up with development, but it is usef
 | test         | Has all testing cases and data |
 | utils        | Simple stateless code |
 
-## Contributing
-TBD
+## Contributing  
+
+We encourage you to contribute to NEOLOL!  
+Please check our quite short [Contribution Guide](CONTRIBUTING.md).  
+
+You can also discuss features and bugs on our issues page.
 
 ## Built with
 - [Next.js](https://nextjs.org/)
