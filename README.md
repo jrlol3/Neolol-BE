@@ -71,7 +71,20 @@ The collection uses Environment Variables, which you can also import on [Alpha.p
 It is incomplete, as it takes effort to keep up with development, but it is useful for manual testing  
 
 ### Project Structure
-TBD
+| Folder       | Description  |
+| ------------ | ------------ |
+| config       | Keeps environment variables, cookie setup and keys |
+| constants    | Keeps configurations in an easy to import way |
+| controllers  | Deals with request validation, utilizes services and returns responses  |
+| database     | Configures the database while storing queries and sample data |
+| helpers      | Contains simple code used by other classes |
+| middlewares  | Next.js middlewares and error handling |
+| models       | Keeps all the database entities in an easy to import way |
+| routes       | Configures all Express routes and keeps the Swagger docs |
+| services     | Handles all the business logic for the controllers |
+| swagger      | Generates the Swagger docs from the info in routes |
+| test         | Has all testing cases and data |
+| utils        | Simple stateless code |
 
 ## Contributing
 TBD
