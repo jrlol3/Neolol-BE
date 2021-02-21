@@ -59,13 +59,16 @@ TBD
 TBD
 
 ## Documentation
-### Swagger
-You can paste [Swagger YAML](docs/api.yml) at https://editor.swagger.io/
-Or open the [Swagger UI HTML at /docs/swagger.html](docs/swagger.html) locally.
-Both are built at every run!
 
-### Postman Endpoint Collection
-TBD
+### [Swagger](https://swagger.io/)  
+You can paste [Swagger YAML](docs/api.yml) at https://editor.swagger.io/  
+Or open the [Swagger UI HTML at /docs/swagger.html](docs/swagger.html) locally  
+Both are updated at every run   
+
+### [Postman](https://www.postman.com/)
+You can import the Postman collection on [NEOLOL.postman_collection.json](docs/postman/NEOLOL.postman_collection.json)  
+The collection uses Environment Variables, which you can also import on [Alpha.postman_environment.json](docs/postman/Alpha.postman_environment.json)  
+It is incomplete, as it takes effort to keep up with development, but it is useful for manual testing  
 
 ### Project Structure
 TBD
